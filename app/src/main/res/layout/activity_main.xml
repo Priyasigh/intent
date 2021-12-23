@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btncall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone Call" />
+
+        <Button
+        android:id="@+id/btnemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send email" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btngmail"
+        android:text="Gmail">
+
+    </Button>
+
+
+    <Button
+        android:id="@+id/btnweb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="launch website" />
+
+    <Button
+        android:id="@+id/btnsms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Composite SMS" />
+
+
+</LinearLayout>
