@@ -8,6 +8,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
@@ -19,7 +20,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnwebsite:Button
     lateinit var btnsms:Button
     lateinit var btnCallUser:Button
-
+    lateinit var nameEt:EditText
+    lateinit var emailEt:EditText
+    lateinit var phoneEt:EditText
+    lateinit var saveBtn:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,11 +34,29 @@ class MainActivity : AppCompatActivity() {
         btngmail=findViewById(R.id.btngmail)
         btnsms=findViewById(R.id.btnsms)
         btnwebsite=findViewById(R.id.btnweb)
-    }
+         nameEt = findViewById(R.id.nameEt)
+        emailEt = findViewById(R.id.emailEt)
+        phoneEt = findViewById(R.id.phoneEt)
+        saveBtn = findViewById(R.id.saveBtn)
 
+    }
 
     override fun onStart() {
         super.onStart()
+
+        saveBtn.setOnClickListener {
+//            handle button click
+            val name = nameEt.text.toString()
+            val email = emailEt.text.toString()
+            val phone = phoneEt.text.toString()
+
+            //intent to start activity
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
+            intent.putExtra("Name", name)
+            intent.putExtra("Email", email)
+            intent.putExtra("Phone", phone)
+            startActivity(intent)
+        }
 
         btnemail.setOnClickListener {
 
